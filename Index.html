@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shadow Network | Official Store</title>
+
+    <meta name="description" content="Official Shadow Network Minecraft Store">
+    <meta name="theme-color" content="#7c3aed">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="stars"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">S</span>
+
+            <div>
+                <strong>SHADOW</strong>
+                <small>NETWORK</small>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#ranks">Ranks</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart
+            <span id="cart-count">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- Hero -->
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    SHADOW NETWORK IS ONLINE
+                </div>
+
+                <h1>
+                    ENTER THE
+                    <span>SHADOW</span>
+                </h1>
+
+                <p>
+                    Rise through the ranks.
+                    Unlock exclusive perks.
+                    Become legendary.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#ranks" class="primary-button">
+                        VIEW RANKS
+                    </a>
+
+                    <button class="secondary-button" onclick="copyIP()">
+                        COPY SERVER IP
+                    </button>
+                </div>
+
+                <div class="server-ip">
+                    <span>SERVER IP</span>
+                    <strong id="server-ip">play.shadownetwork.net</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Stats -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-icon">🟢</span>
+                <div>
+                    <strong>ONLINE</strong>
+                    <p>Server Status</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">👥</span>
+                <div>
+                    <strong id="player-count">127+</strong>
+                    <p>Players Online</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">⚡</span>
+                <div>
+                    <strong>1.12.2</strong>
+                    <p>Server Version</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Ranks -->
+        <section id="ranks" class="section">
+
+            <div class="section-heading">
+
+                <span>CHOOSE YOUR POWER</span>
+
+                <h2>Shadow <strong>Ranks</strong></h2>
+
+                <p>
+                    Upgrade your experience and unlock exclusive
+                    abilities on Shadow Network.
+                </p>
+
+            </div>
+
+
+            <div class="rank-grid">
+
+                <!-- VIP -->
+                <div class="rank-card vip">
+
+                    <div class="rank-icon">◆</div>
+
+                    <h3>VIP</h3>
+
+                    <div class="price">
+                        <span>$</span>4.99
+                    </div>
+
+                    <p class="rank-description">
+                        Enter the Shadow with your first upgrade.
+                    </p>
+
+                    <ul>
+                        <li>✓ VIP Prefix</li>
+                        <li>✓ Exclusive Commands</li>
+                        <li>✓ VIP Chat Color</li>
+                        <li>✓ Special Perks</li>
+                    </ul>
+
+                    <button onclick="addToCart('VIP', 4.99)">
+                        BUY VIP
+                    </button>
+
+                </div>
+
+
+                <!-- PREMIUM -->
+                <div class="rank-card premium">
+
+                    <div class="rank-icon">◆</div>
+
+                    <h3>PREMIUM</h3>
+
+                    <div class="price">
+                        <span>$</span>9.99
+                    </div>
+
+                    <p class="rank-description">
+                        Step deeper into the Shadow.
+                    </p>
+
+                    <ul>
+                        <li>✓ Everything in VIP</li>
+                        <li>✓ Premium Prefix</li>
+                        <li>✓ More Commands</li>
+                        <li>✓ Exclusive Perks</li>
+                    </ul>
+
+                    <button onclick="addToCart('PREMIUM', 9.99)">
+                        BUY PREMIUM
+                    </button>
+
+                </div>
+
+
+                <!-- ELITE -->
+                <div class="rank-card elite popular">
+
+                    <div class="popular-badge">
+                        MOST POPULAR
+                    </div>
+
+                    <div class="rank-icon">◆</div>
+
+                    <h3>ELITE</h3>
+
+                    <div class="price">
+                        <span>$</span>19.99
+                    </div>
+
+                    <p class="rank-description">
+                        Become one of the elite.
+                    </p>
+
+                    <ul>
+                        <li>✓ Everything in Premium</li>
+                        <li>✓ Elite Prefix</li>
+                        <li>✓ Exclusive Commands</li>
+                        <li>✓ Elite Cosmetics</li>
+                        <li>✓ Special Rewards</li>
+                    </ul>
+
+                    <button onclick="addToCart('ELITE', 19.99)">
+                        BUY ELITE
+                    </button>
+
+                </div>
+
+
+                <!-- SHADOW -->
+                <div class="rank-card shadow">
+
+                    <div class="rank-icon">◆</div>
+
+                    <h3>SHADOW</h3>
+
+                    <div class="price">
+                        <span>$</span>29.99
+                    </div>
+
+                    <p class="rank-description">
+                        Command the darkness.
+                    </p>
+
+                    <ul>
+                        <li>✓ Everything in Elite</li>
+                        <li>✓ Shadow Prefix</li>
+                        <li>✓ Powerful Commands</li>
+                        <li>✓ Exclusive Cosmetics</li>
+                        <li>✓ Shadow Rewards</li>
+                    </ul>
+
+                    <button onclick="addToCart('SHADOW', 29.99)">
+                        BUY SHADOW
+                    </button>
+
+                </div>
+
+
+                <!-- SHADOW+ -->
+                <div class="rank-card shadow-plus">
+
+                    <div class="rank-icon">◆</div>
+
+                    <h3>SHADOW+</h3>
+
+                    <div class="price">
+                        <span>$</span>49.99
+                    </div>
+
+                    <p class="rank-description">
+                        The ultimate Shadow Network rank.
+                    </p>
+
+                    <ul>
+                        <li>✓ Everything in Shadow</li>
+                        <li>✓ Shadow+ Prefix</li>
+                        <li>✓ Ultimate Commands</li>
+                        <li>✓ Exclusive Cosmetics</li>
+                        <li>✓ Maximum Perks</li>
+                        <li>✓ Priority Support</li>
+                    </ul>
+
+                    <button onclick="addToCart('SHADOW+', 49.99)">
+                        BUY SHADOW+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section id="features" class="section features-section">
+
+            <div class="section-heading">
+
+                <span>WHY SHADOW?</span>
+
+                <h2>More Than A <strong>Rank</strong></h2>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <div>⚡</div>
+                    <h3>Instant Delivery</h3>
+                    <p>
+                        Your rank can be delivered directly
+                        to your Minecraft account.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div>🔒</div>
+                    <h3>Secure Payments</h3>
+                    <p>
+                        Your payment information stays protected
+                        through our payment provider.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div>💜</div>
+                    <h3>Exclusive Perks</h3>
+                    <p>
+                        Unlock perks designed specifically
+                        for Shadow Network players.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div>🏆</div>
+                    <h3>Stand Out</h3>
+                    <p>
+                        Show everyone your rank and status
+                        across the network.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section id="faq" class="section">
+
+            <div class="section-heading">
+
+                <span>NEED HELP?</span>
+
+                <h2>Frequently Asked <strong>Questions</strong></h2>
+
+            </div>
+
+            <div class="faq-container">
+
+                <details>
+                    <summary>How do I receive my rank?</summary>
+                    <p>
+                        After a successful purchase, your rank will
+                        be delivered to the Minecraft username you
+                        entered during checkout.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>What Minecraft version do you support?</summary>
+                    <p>
+                        Shadow Network currently supports Minecraft 1.12.2.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Can I upgrade my existing rank?</summary>
+                    <p>
+                        Yes. Upgrade options can be added to the store
+                        so you only pay the difference when applicable.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Where can I get support?</summary>
+                    <p>
+                        Join the Shadow Network Discord for support
+                        and community updates.
+                    </p>
+                </details>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            SHADOW NETWORK
+        </div>
+
+        <p>
+            © 2026 Shadow Network. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Discord</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+        </div>
+
+    </footer>
+
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-button" onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>Your Cart</h2>
+
+            <div id="cart-items">
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+            </div>
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cart-total">$0.00</strong>
+            </div>
+
+            <button class="checkout-button" onclick="checkout()">
+                CHECKOUT
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
