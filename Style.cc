@@ -1,6 +1,6 @@
 /* =========================================
    SHADOW NETWORK STORE
-   Main Website Styles
+   COMPLETE STYLESHEET
    ========================================= */
 
 * {
@@ -20,6 +20,11 @@ body {
     overflow-x: hidden;
 }
 
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* =========================================
    BACKGROUND
    ========================================= */
@@ -29,6 +34,7 @@ body {
     inset: 0;
     z-index: -10;
     overflow: hidden;
+
     background:
         radial-gradient(
             circle at 20% 20%,
@@ -45,24 +51,32 @@ body {
 
 .glow {
     position: absolute;
+
     width: 500px;
     height: 500px;
+
     border-radius: 50%;
+
     filter: blur(120px);
+
     opacity: 0.25;
+
     animation: floatGlow 10s ease-in-out infinite alternate;
 }
 
 .glow-one {
     background: #7c3aed;
+
     top: -200px;
     left: -150px;
 }
 
 .glow-two {
     background: #a855f7;
+
     right: -200px;
     bottom: -200px;
+
     animation-delay: 3s;
 }
 
@@ -79,10 +93,25 @@ body {
 .stars {
     position: absolute;
     inset: 0;
+
     opacity: 0.25;
+
     background-image:
         radial-gradient(#ffffff 1px, transparent 1px);
+
     background-size: 70px 70px;
+
+    animation: starsMove 20s linear infinite;
+}
+
+@keyframes starsMove {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 70px 70px;
+    }
 }
 
 /* =========================================
@@ -103,14 +132,17 @@ body {
     padding: 18px 6%;
 
     background: rgba(5, 5, 7, 0.75);
+
     backdrop-filter: blur(20px);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
     display: flex;
     align-items: center;
+
     gap: 12px;
 }
 
@@ -123,11 +155,12 @@ body {
 
     border-radius: 12px;
 
-    background: linear-gradient(
-        135deg,
-        #7c3aed,
-        #a855f7
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #a855f7
+        );
 
     box-shadow:
         0 0 25px rgba(124, 58, 237, 0.55);
@@ -138,31 +171,39 @@ body {
 
 .logo strong {
     display: block;
+
     font-size: 17px;
+
     letter-spacing: 2px;
 }
 
 .logo small {
     display: block;
+
     margin-top: 2px;
 
     color: #a855f7;
 
     font-size: 9px;
+
     font-weight: 800;
+
     letter-spacing: 4px;
 }
 
 .navbar nav {
     display: flex;
+
     gap: 30px;
 }
 
 .navbar nav a {
     color: #a1a1aa;
+
     text-decoration: none;
 
     font-size: 14px;
+
     font-weight: 600;
 
     transition: 0.25s;
@@ -173,9 +214,11 @@ body {
 }
 
 .cart-button {
-    border: 1px solid rgba(168, 85, 247, 0.4);
+    border:
+        1px solid rgba(168, 85, 247, 0.4);
 
-    background: rgba(124, 58, 237, 0.12);
+    background:
+        rgba(124, 58, 237, 0.12);
 
     color: white;
 
@@ -189,9 +232,13 @@ body {
 }
 
 .cart-button:hover {
-    background: rgba(124, 58, 237, 0.3);
+    background:
+        rgba(124, 58, 237, 0.3);
 
     transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(124, 58, 237, 0.2);
 }
 
 #cart-count {
@@ -218,6 +265,7 @@ body {
     min-height: 720px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -232,20 +280,25 @@ body {
 
 .status {
     display: inline-flex;
+
     align-items: center;
+
     gap: 8px;
 
     padding: 9px 15px;
 
     border-radius: 999px;
 
-    background: rgba(34, 197, 94, 0.08);
+    background:
+        rgba(34, 197, 94, 0.08);
 
-    border: 1px solid rgba(34, 197, 94, 0.25);
+    border:
+        1px solid rgba(34, 197, 94, 0.25);
 
     color: #86efac;
 
     font-size: 12px;
+
     font-weight: 800;
 
     letter-spacing: 1px;
@@ -281,7 +334,8 @@ body {
 .hero h1 {
     margin-top: 30px;
 
-    font-size: clamp(55px, 9vw, 115px);
+    font-size:
+        clamp(55px, 9vw, 115px);
 
     line-height: 0.9;
 
@@ -295,19 +349,22 @@ body {
 
     color: transparent;
 
-    background: linear-gradient(
-        90deg,
-        #7c3aed,
-        #c084fc,
-        #7c3aed
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #c084fc,
+            #7c3aed
+        );
 
     background-size: 200% auto;
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
-    animation: gradientMove 4s linear infinite;
+    animation:
+        gradientMove 4s linear infinite;
 
     text-shadow:
         0 0 60px rgba(124, 58, 237, 0.25);
@@ -327,12 +384,15 @@ body {
     color: #a1a1aa;
 
     font-size: 18px;
+
     line-height: 1.7;
 }
 
 .hero-buttons {
     display: flex;
+
     justify-content: center;
+
     gap: 14px;
 
     margin-top: 35px;
@@ -358,11 +418,12 @@ body {
 .primary-button {
     color: white;
 
-    background: linear-gradient(
-        135deg,
-        #7c3aed,
-        #9333ea
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
 
     box-shadow:
         0 0 30px rgba(124, 58, 237, 0.35);
@@ -378,13 +439,16 @@ body {
 .secondary-button {
     color: white;
 
-    background: rgba(255, 255, 255, 0.04);
+    background:
+        rgba(255, 255, 255, 0.04);
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
 }
 
 .secondary-button:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background:
+        rgba(255, 255, 255, 0.08);
 
     transform: translateY(-3px);
 }
@@ -426,13 +490,16 @@ body {
     margin: -30px auto 100px;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 15px;
 }
 
 .stat-card {
     display: flex;
+
     align-items: center;
 
     gap: 15px;
@@ -441,11 +508,22 @@ body {
 
     border-radius: 15px;
 
-    background: rgba(255, 255, 255, 0.035);
+    background:
+        rgba(255, 255, 255, 0.035);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
 
     backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(168, 85, 247, 0.3);
 }
 
 .stat-icon {
@@ -496,7 +574,8 @@ body {
 .section-heading h2 {
     margin-top: 12px;
 
-    font-size: clamp(35px, 5vw, 55px);
+    font-size:
+        clamp(35px, 5vw, 55px);
 
     letter-spacing: -2px;
 }
@@ -516,7 +595,7 @@ body {
 }
 
 /* =========================================
-   RANK CARDS
+   RANK GRID
    ========================================= */
 
 .rank-grid {
@@ -529,6 +608,10 @@ body {
 
     align-items: stretch;
 }
+
+/* =========================================
+   RANK CARDS
+   ========================================= */
 
 .rank-card {
     position: relative;
@@ -544,7 +627,8 @@ body {
             rgba(255, 255, 255, 0.018)
         );
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
 
     overflow: hidden;
 
@@ -579,7 +663,8 @@ body {
 .rank-card:hover {
     transform: translateY(-8px);
 
-    border-color: rgba(168, 85, 247, 0.45);
+    border-color:
+        rgba(168, 85, 247, 0.45);
 
     box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.4);
@@ -590,13 +675,15 @@ body {
     height: 45px;
 
     display: grid;
+
     place-items: center;
 
     margin-bottom: 20px;
 
     border-radius: 12px;
 
-    background: rgba(124, 58, 237, 0.12);
+    background:
+        rgba(124, 58, 237, 0.12);
 
     color: #a855f7;
 
@@ -654,7 +741,8 @@ body {
 
     border-radius: 9px;
 
-    background: rgba(124, 58, 237, 0.15);
+    background:
+        rgba(124, 58, 237, 0.15);
 
     color: white;
 
@@ -670,9 +758,13 @@ body {
 
     box-shadow:
         0 0 25px rgba(124, 58, 237, 0.35);
+
+    transform: translateY(-2px);
 }
 
-/* Rank themes */
+/* =========================================
+   RANK COLORS
+   ========================================= */
 
 .vip .rank-icon {
     color: #60a5fa;
@@ -683,7 +775,8 @@ body {
 }
 
 .elite {
-    border-color: rgba(168, 85, 247, 0.35);
+    border-color:
+        rgba(168, 85, 247, 0.35);
 }
 
 .elite .rank-icon {
@@ -717,9 +810,11 @@ body {
 
     border-radius: 999px;
 
-    background: rgba(168, 85, 247, 0.15);
+    background:
+        rgba(168, 85, 247, 0.15);
 
-    border: 1px solid rgba(168, 85, 247, 0.3);
+    border:
+        1px solid rgba(168, 85, 247, 0.3);
 
     color: #d8b4fe;
 
@@ -748,9 +843,11 @@ body {
 
     border-radius: 16px;
 
-    background: rgba(255, 255, 255, 0.03);
+    background:
+        rgba(255, 255, 255, 0.03);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
 
     transition: 0.3s;
 }
@@ -758,9 +855,14 @@ body {
 .feature-card:hover {
     transform: translateY(-5px);
 
-    background: rgba(124, 58, 237, 0.06);
+    background:
+        rgba(124, 58, 237, 0.06);
 
-    border-color: rgba(168, 85, 247, 0.25);
+    border-color:
+        rgba(168, 85, 247, 0.25);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
 .feature-card > div {
@@ -798,9 +900,23 @@ details {
 
     border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.03);
+    background:
+        rgba(255, 255, 255, 0.03);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.25s;
+}
+
+details:hover {
+    border-color:
+        rgba(168, 85, 247, 0.25);
+}
+
+details[open] {
+    background:
+        rgba(124, 58, 237, 0.05);
 }
 
 summary {
@@ -828,9 +944,11 @@ footer {
 
     text-align: center;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-top:
+        1px solid rgba(255, 255, 255, 0.07);
 
-    background: rgba(0, 0, 0, 0.25);
+    background:
+        rgba(0, 0, 0, 0.25);
 }
 
 .footer-logo {
@@ -865,6 +983,8 @@ footer p {
     text-decoration: none;
 
     font-size: 12px;
+
+    transition: 0.2s;
 }
 
 .footer-links a:hover {
@@ -889,13 +1009,27 @@ footer p {
 
     padding: 20px;
 
-    background: rgba(0, 0, 0, 0.75);
+    background:
+        rgba(0, 0, 0, 0.75);
 
     backdrop-filter: blur(12px);
 }
 
 .modal.active {
     display: flex;
+
+    animation:
+        modalFade 0.2s ease;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .modal-content {
@@ -914,10 +1048,24 @@ footer p {
 
     background: #0b0b10;
 
-    border: 1px solid rgba(168, 85, 247, 0.25);
+    border:
+        1px solid rgba(168, 85, 247, 0.25);
 
     box-shadow:
         0 30px 100px rgba(0, 0, 0, 0.6);
+
+    animation:
+        modalSlide 0.25s ease;
+}
+
+@keyframes modalSlide {
+    from {
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+    }
 }
 
 .modal-content h2 {
@@ -939,13 +1087,23 @@ footer p {
 
     border-radius: 9px;
 
-    background: rgba(255, 255, 255, 0.06);
+    background:
+        rgba(255, 255, 255, 0.06);
 
     color: white;
 
     font-size: 22px;
 
     cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.close-button:hover {
+    background:
+        rgba(239, 68, 68, 0.15);
+
+    color: #f87171;
 }
 
 .empty-cart {
@@ -954,6 +1112,56 @@ footer p {
     text-align: center;
 
     color: #71717a;
+}
+
+.cart-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+.cart-item strong {
+    font-size: 15px;
+}
+
+.cart-item p {
+    margin-top: 4px;
+
+    color: #a855f7;
+
+    font-size: 13px;
+}
+
+.cart-item button {
+    width: 32px;
+    height: 32px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+
+    color: #f87171;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.cart-item button:hover {
+    background:
+        rgba(239, 68, 68, 0.2);
+
+    transform: scale(1.05);
 }
 
 .cart-total {
@@ -965,7 +1173,14 @@ footer p {
 
     padding-top: 20px;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cart-total strong {
+    color: #c084fc;
+
+    font-size: 20px;
 }
 
 .checkout-button {
@@ -979,39 +1194,171 @@ footer p {
 
     border-radius: 10px;
 
-    background: #7c3aed;
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
 
     color: white;
 
     font-weight: 900;
 
     cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.checkout-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(124, 58, 237, 0.3);
 }
 
 /* =========================================
-   RESPONSIVE
+   NOTIFICATIONS
    ========================================= */
 
-@media (max-width: 900px) {
+.shadow-notification {
+    position: fixed;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform:
+        translate(-50%, 20px);
+
+    z-index: 9999;
+
+    padding: 14px 20px;
+
+    border-radius: 12px;
+
+    background: #111116;
+
+    border:
+        1px solid rgba(168, 85, 247, 0.35);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(124, 58, 237, 0.15);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.shadow-notification.show {
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+}
+
+/* =========================================
+   SCROLL REVEAL
+   ========================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+/* =========================================
+   CUSTOM SCROLLBAR
+   ========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050507;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            #7c3aed,
+            #a855f7
+        );
+
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c084fc;
+}
+
+/* =========================================
+   SELECTION
+   ========================================= */
+
+::selection {
+    background:
+        rgba(124, 58, 237, 0.45);
+
+    color: white;
+}
+
+/* =========================================
+   RESPONSIVE — TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
 
     .navbar nav {
-        display: none;
-    }
-
-    .stats {
-        grid-template-columns: 1fr;
+        gap: 18px;
     }
 
     .feature-grid {
         grid-template-columns:
             repeat(2, 1fr);
     }
+
+    .rank-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 }
 
-@media (max-width: 600px) {
+/* =========================================
+   RESPONSIVE — MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
 
     .navbar {
         padding: 14px 20px;
+    }
+
+    .navbar nav {
+        display: none;
     }
 
     .logo strong {
@@ -1021,6 +1368,8 @@ footer p {
     .logo-icon {
         width: 38px;
         height: 38px;
+
+        font-size: 18px;
     }
 
     .cart-button {
@@ -1030,7 +1379,8 @@ footer p {
     .hero {
         min-height: 650px;
 
-        padding-top: 70px;
+        padding:
+            70px 20px 90px;
     }
 
     .hero h1 {
@@ -1050,15 +1400,79 @@ footer p {
         width: 100%;
     }
 
-    .feature-grid {
+    .stats {
         grid-template-columns: 1fr;
+
+        margin-bottom: 80px;
     }
 
     .section {
+        width: 92%;
+
         margin-bottom: 100px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
     }
 
     .rank-grid {
         grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 25px;
+
+        border-radius: 16px;
+    }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .logo small {
+        display: none;
+    }
+
+    .logo strong {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .status {
+        font-size: 10px;
+    }
+
+    .server-ip strong {
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
     }
 }
